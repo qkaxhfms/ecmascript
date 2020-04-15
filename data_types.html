@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Types</title>
+</head>
+<body>
+    <h1>Data Types</h1>
+    
+    자바스크립트에는 일곱 가지 기본 자료형이 있습니다.
+
+    숫자형 – 정수, 부동 소수점 숫자 등의 숫자를 나타낼 때 사용합니다.
+    bigint – 길이 제약 없이 정수를 나타낼 수 있습니다.
+    문자형 – 하나 혹은 그 이상의 문자로 만들어진 문자열을 나타낼 때 사용합니다. 단일 문자를 나타내는 별도의 자료형은 없습니다.
+    불린형 – true, false를 나타낼 때 사용합니다.
+    null – null 값만을 위한 독립 자료형입니다. null은 알 수 없는 값을 나타냅니다.
+    undefined – undefined 값만을 위한 독립 자료형입니다. undefined는 할당되지 않은 값을 나타냅니다.
+    객체형 – 복잡한 데이터 구조를 표현할 때 사용합니다.
+    심볼형 – 객체의 고유 식별자를 만들 때 사용합니다.
+    typeof 연산자는 피연산자의 자료형을 알려줍니다.
+    
+    typeof x 또는 typeof(x) 형태로 사용합니다.
+    피 연산자의 자료형을 문자열 형태로 반환합니다.
+    null의 typeof 연산은 "object"인데, 이는 언어상 오류입니다. null은 객체가 아닙니다.
+
+    <script>
+    let message = "hello";
+    message = 123456;
+    let n = 123;
+    n=12.345;
+    console.log(1/0); -> infinity
+    console.log(Infinity); -> infinity
+    console.log("숫자가아님 / 2") -> Nan 계산 중에 에러가발생했따.
+
+    BigInt
+    BigInt형은 표준으로 채택된 지 얼마 안 된 자료형으로, 길이에 상관없이 정수를 나타낼 수 있습니다.
+    BigInt는 정수 리터럴 끝에 n을 붙이면 만들 수 있습니다.
+    
+    -> 끝에 'n'이 붙으면 BigInt형 자료입니다.
+    const bigInt = 1234567890123456789012345678901234567890n;
+
+    큰따옴표: "Hello"
+    작은따옴표: 'Hello'
+    역 따옴표(백틱, backtick): `Hello`
+
+    역 따옴표로 변수나 표현식을 감싼 후 ${…}안에 넣어주면, 아래와 같이 원하는 변수나 표현식을 문자열 중간에 손쉽게 넣을 수 있습니다.
+
+    let name = "John";
+
+    -> 변수를 문자열 중간에 삽입
+    alert( `Hello, ${name}!` ); -> Hello, John!
+    
+    -> 표현식을 문자열 중간에 삽입
+    alert( `the result is ${1 + 2}` ); -> the result is 3
+    
+    alert( "the result is ${1 + 2}" ); // the result is ${1 + 2} (큰따옴표는 확장 기능을 지원하지 않습니다.)
+
+    </script>
+</body>
+</html>
