@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Type Conversions</title>
+</head>
+<body>
+    <h1>형 변환</h1>
+    <p>함수와 연산자에 전달되는 값은 대부분 적절한 자료형으로 자동 변환됩니다. 이과정을 "형 변환(type conversion)"이라고 합니다.</p>
+    <script>
+        //문자형으로 변환
+        //문자형으로의 형 변환은 문자형의 값이 필요할 때 일어납니다.
+        //console.log메서드는 매개변수로 문자형을 받기 때문에, console.log(value)에서 value는 문자형이어야 합니다. 만약, 다른 형의 값을 전달받으면 이 값은 문자형으로 자동 변환됩니다.
+        //String(value) 함수를 호출해 전달받은 값을 문자열로 변환 할 수도 있습니다.
+        let value = true;
+        console.log(typeof value); // boolean
+        value = String(value); // 변수 value엔 문자열 "true"가 저장됩니다.
+        console.log(typeof value); // string
+
+        //숫자형으로 변환
+        //숫자형으로의 변환은 수학과 관련된 함수와 표현식에서 자동으로 일어납니다.
+        //숫자형이 아닌 값에 나누기 /를 적용한 경우와 같이 말이죠.
+        console.log( "6" / "2" ); // 3, 문자열이 숫자형으로 자동변환된 후 연산이 수행됩니다.
+        Number(value) 함수를 사용하면 주어진 값(value)을 숫자형으로 명시해서 변환할 수 있습니다.
+        let str = "123";
+        console.log(typeof str); // string
+        let num = Number(str); // 문자열 "123"이 숫자 123으로 변환됩니다.
+        console.log(typeof num); // number
+        //숫자형 값를 사용해 무언가를 하려고 하는데 그 값을 문자 기반 폼(form)을 통해 입력받는 경우엔, 이런 명시적 형 변환이 필수입니다.
+        //한편, 숫자 이외의 글자가 들어가 있는 문자열을 숫자형으로 변환하려고 하면, 그 결과는 NaN이 됩니다. 예시를 살펴봅시다.
+        let age = Number("임의의 문자열 123");
+        console.log(age); // NaN, 형 변환이 실패합니다.
+    
+    
+    
+    </script>
+</body>
+</html>
