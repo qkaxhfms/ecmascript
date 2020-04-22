@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loops:while and for</title>
+</head>
+<body>
+    <h1>Loops:while and for</h1>
+    개발을 하다 보면 여러 동작을 반복해야 하는 경우가 종종 생깁니다.
+    상품 목록에서 상품을 차례대로 출력하거나 숫자를 1부터 10까지 하나씩 증가시키면서 동일한 코드를 반복 실행해야 하는 경우같이 말이죠.
+    반복문(loop) 을 사용하면 동일한 코드를 여러 번 반복할 수 있습니다.
+    <script>
+
+        // while 반복문 기본형태
+        while (condition) {
+        // 코드
+        // '반복문 본문(body)'이라 불림
+        }
+
+        let i = 0;
+            while (i < 3) { // 0, 1, 2가 출력됩니다.
+            console.log( i );
+            i++;
+        }   
+
+        // do while 반복문 기본형태
+        do {
+        // 반복문 본문
+        } while (condition);
+
+        let i = 0;
+        do {
+            console.log( i );
+            i++;
+        } while (i < 3);
+
+        // for 반복문 기본형태
+        for (begin; condition; step) {
+        // ... 반복문 본문 ...
+        }
+        for (let i = 0; i < 3; i++) { // 0, 1, 2가 출력됩니다.
+            console.log(i);
+        }
+
+
+
+    </script>
+</body>
+</html>
