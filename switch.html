@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>switch문</h1>
+    복수의 if 조건문은 switch문으로 바꿀 수 있습니다.
+    switch문을 사용한 비교법은 특정 변수를 다양한 상황에서 비교할 수 있게 해줍니다.
+    코드 자체가 비교 상황을 잘 설명한다는 장점도 있습니다.
+
+    <script>
+        switch(x) {
+            case 'value1':  // if (x === 'value1')
+                ...
+                [break]
+
+            case 'value2':  // if (x === 'value2')
+                ...
+                [break]
+
+            default:
+                ...
+                [break]
+        }
+
+        let a = 2 + 2;
+
+        switch (a) {
+            case 3:
+                alert( '비교하려는 값보다 작습니다.' );
+                break;
+            case 4:
+                alert( '비교하려는 값과 일치합니다.' );
+                break;
+            case 5:
+                alert( '비교하려는 값보다 큽니다.' );
+                break;
+            default:
+                alert( "어떤 값인지 파악이 되지 않습니다." );
+        }
+
+        
+    </script>
+</body>
+</html>
