@@ -10,16 +10,54 @@
     스크립트를 작성하다 보면 유사한 동작을 하는 코드가 여러 곳에서 필요할 때가 많습니다.
     사용자가 로그인이나 로그아웃을 했을 때 안내 메시지를 보여주는 동작 같은 경우 말이죠.
     함수는 프로그램을 구성하는 주요 "구성 요소(building blocks)"입니다. 함수를 이용하면 중복 없이 유사한 동작을 하는 코드를 여러 번 호출할 수 있습니다.
-    우리는 앞서 다양한 예시에서 alert(message), prompt(message, default), confirm(question)과 같은 내장 함수를 사용해 보았습니다.
+    우리는 앞서 다양한 예시에서 console.log(message), prompt(message, default), confirm(question)과 같은 내장 함수를 사용해 보았습니다.
     이번 챕터에선 함수를 직접 만드는 방법에 대해 알아보겠습니다.
 
     <script>
         function showMessage() {
-            alert( '안녕하세요!' );
+            console.log( '안녕하세요!' );
         }
         function name(parameters) {
-        ...함수 본문...
+            ...함수 본문...
         }
+        function showMessage() {
+            console.log( '안녕하세요!' );
+        }
+        showMessage();
+        showMessage();
+
+        function showMessage() {
+        let message = "안녕하세요!"; // 지역 변수
+            console.log( message );
+        }
+        showMessage(); // 안녕하세요!
+        console.log( message ); // <-- Error: message is not defined (message는 함수 내 지역 변수이기 때문에 에러가 발생합니다.)
+
+
+        let userName = 'John';
+        function showMessage() {
+            let message = 'Hello, ' + userName;
+            console.log(message);
+        }
+
+        showMessage(); // Hello, John
+
+        let userName = 'John';
+
+        function showMessage() {
+            userName = "Bob"; // (1) 외부 변수를 수정함
+
+            let message = 'Hello, ' + userName;
+            console.log(message);
+        }
+
+        console.log( userName ); // 함수 호출 전이므로 John 이 출력됨
+
+        showMessage();
+
+        console.log( userName ); // 함수에 의해 Bob 으로 값이 바뀜
+
+
     </script>
 
 </body>
