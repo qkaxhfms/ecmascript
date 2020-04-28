@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrow Functions</title>
+</head>
+<body>
+    <h1>Arrow Functions</h1>
+    let func = (arg1, arg2, ...argN) => expression
+    <script>
+        let func = (arg1, arg2, ...argN) => expression
+        let func = function(arg1, arg2, ...argN) {
+            return expression;
+        };
+        let sum = (a, b) => a + b;
+
+        /* 위 화살표 함수는 아래 함수의 축약 버전입니다.
+
+        let sum = function(a, b) {
+        return a + b;
+        };
+        */
+
+        alert( sum(1, 2) ); // 3
+        let double = n => n * 2;
+        // let double = function(n) { return n * 2 }과 거의 동일합니다.
+
+        alert( double(3) ); // 6
+        let sayHi = () => alert("안녕하세요!");
+
+        sayHi();
+        let age = prompt("나이를 알려주세요.", 18);
+
+        let welcome = (age < 18) ?
+            () => alert('안녕') :
+            () => alert("안녕하세요!");
+
+        welcome();
+
+        let sum = (a, b) => {  // 중괄호는 본문 여러 줄로 구성되어 있음을 알려줍니다.
+        let result = a + b;
+            return result; // 중괄호를 사용했다면, return 지시자로 결괏값을 반환해주어야 합니다.
+        };
+
+        alert( sum(1, 2) ); // 3
+
+    </script>
+</body>
+</html>
