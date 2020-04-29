@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>JavaScript Specials</h1>
+    지금까지 배운 내용을 다시 떠올리고 요약해봅시다.
+    외우기 쉽지 않아 자칫하면 실수할 수 있는 부분을 중심으로 요약해 보도록 하겠습니다.
+    <script>
+        alert('Hello');
+        alert('World');
+
+        alert("이 메시지가 출력된 후에 에러가 발생합니다.");
+        [1, 2].forEach(alert);
+
+        function f() {
+            // 함수 선언문 끝엔 세미콜론이 필요 없습니다.
+        }
+
+        for(;;) {
+            // 반복문 끝엔 세미콜론이 필요 없습니다.
+        }
+
+        // let
+        // const – 한 번 값을 할당하면 더는 값을 바꿀 수 없는 상수를 정의할 때 쓰입니다.
+        // var – 과거에 쓰이던 키워드로 자세한 내용은 추후에 다룰 예정입니다.
+
+        prompt(question, [default])
+        //프롬프트 창에 매개변수로 받은 question을 넣어 사용자에게 보여줍니다.
+        //‘확인’ 버튼을 눌렀을 땐 사용자가 입력한 값을 반환해주고, ‘취소’ 버튼을 눌렀을 땐 null을 반환합니다.
+
+        confirm(question)
+        //컨펌 대화상자에 매개변수로 받은 question을 넣어 사용자에게 보여줍니다.
+        //사용자가 ‘확인’ 버튼을 누르면 true를, 그 외의 경우는 false를 반환합니다.
+
+        alert(message)
+        //message가 담긴 얼럿 창을 보여줍니다.
+
+    </script>
+</body>
+</html>
