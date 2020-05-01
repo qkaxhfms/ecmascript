@@ -60,6 +60,49 @@
         ...
         }
 
+        let age = prompt('나이를 알려주세요.', 18);
+
+        switch (age) {
+            case 18:
+                alert("Won't work"); // prompt 함수는 항상 문자열을 반환하므로, 이 case문엔 절대 도달할 수 없습니다.
+
+            case "18":
+                alert("낭랑 18세이시군요!");
+                break;
+
+            default:
+                alert("어떤 case문에도 해당하지 않습니다.");
+        }
+
+        // 함수
+        //함수 선언문: 주요 코드 흐름을 차지하는 방식
+        function sum(a, b) {
+            let result = a + b;
+
+            return result;
+        }
+        //함수 표현식: 표현식 형태로 선언된 함수
+        let sum = function(a, b) {
+            let result = a + b;
+
+            return result;
+        };
+
+        // 화살표(=>) 우측엔 표현식이 있음
+        let sum = (a, b) => a + b;
+
+        // 대괄호{ ... }를 사용하면 본문에 여러 줄의 코드를 작성할 수 있음. return문이 꼭 있어야 함.
+        let sum = (a, b) => {
+        // ...
+            return a + b;
+        }
+
+        // 인수가 없는 경우
+        let sayHi = () => alert("Hello");
+
+        // 인수가 하나인 경우
+        let double = n => n * 2;
+
     </script>
 </body>
 </html>
