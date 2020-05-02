@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>IF & ELSE</h1>
+    조건에 따라 다른 행동을 취해야 할 때가 있습니다.
+    이럴 땐, if문과 ‘물음표’ 연산자라고도 불리는 조건부 연산자 ?를 사용하면 됩니다.
+    <script>
+        let year = prompt('ECMAScript-2015 명세는 몇 년도에 출판되었을까요?', '');
+        if (year == 2015) alert( '정답입니다!' );
+
+        if (0) { // 0은 falsy입니다.
+            ...
+        }
+
+        if (1) { // 1은 truthy입니다.
+            ...
+        }
+
+        let year = prompt('ECMAScript-2015 명세는 몇 년도에 출판되었을까요?', '');
+        if (year == 2015) {
+            alert( '정답입니다!' );
+        } else {
+            alert( '오답입니다!' ); // 2015 이외의 값을 입력한 경우
+        }
+    </script>
+</body>
+</html>
