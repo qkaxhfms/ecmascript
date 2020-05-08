@@ -60,6 +60,28 @@
                 // ...
             };
         }
+        // property의 쓰임새
+
+        user.isAdmin = true;
+        delete user.age;
+        let user = {
+        name: "John",
+            age: 30,
+            "likes birds": true  // 복수의 단어는 따옴표로 묶어야 합니다.
+        };
+
+        let user = {
+            name: "John",
+            age: 30,
+        }
+
+        let fruit = prompt("어떤 과일을 구매하시겠습니까?", "apple");
+
+        let bag = {
+            [fruit]: 5, // 변수 fruit에서 프로퍼티 이름을 동적으로 받아 옵니다.
+        };
+
+        alert( bag.apple ); // fruit에 "apple"이 할당되었다면, 5가 출력됩니다.
     </script>
 </body>
 </html>
