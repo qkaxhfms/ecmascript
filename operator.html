@@ -138,6 +138,53 @@
         n = n + 5;
         n = n * 2;
 
+        //증감연산자
+
+        //증가연산자
+        let counter = 2;
+        counter++;      // counter = counter + 1과 동일하게 동작합니다. 하지만 식은 더 짧습니다.
+        alert( counter ); // 3
+
+        //감소연산자
+        let counter = 2;
+        counter--;      // counter = counter - 1과 동일하게 동작합니다. 하지만 식은 더 짧습니다.
+        alert( counter ); // 1
+
+        counter++와 같이 피연산자 뒤에 올 때는,
+        '후위형(postfix form)'이라고 부릅니다.
+
+        ++counter와 같이 피연산자 앞에 올 때는,
+        '전위형(prefix form)'이라고 부릅니다.
+
+
+        //전위형
+        let counter = 1;
+        let a = ++counter; // (*)
+        alert(a); // 2
+
+        //후위형
+        let counter = 1;
+        let a = counter++; // (*) ++counter를 counter++로 바꿈
+        alert(a); // 1
+
+        let counter = 0;
+        counter++;
+        ++counter;
+        alert( counter ); // 2, 위 두 라인은 동일한 연산을 수행합니다.
+
+        비트 연산자
+        비트 연산자(bitwise operator)는 인수를 32비트 정수로 변환하여 이진 연산을 수행합니다.
+        
+        비트 AND ( & )
+        비트 OR ( | )
+        비트 XOR ( ^ )
+        비트 NOT ( ~ )
+        왼쪽 시프트(LEFT SHIFT) ( << )
+        오른쪽 시프트(RIGHT SHIFT) ( >> )
+        부호 없는 오른쪽 시프트(ZERO-FILL RIGHT SHIFT) ( >>> )
+
+
+
     </script>
 </body>
 </html>
