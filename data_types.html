@@ -73,6 +73,16 @@
     //undefined 값
     //undefined 값도 null 값처럼 자신만의 자료형을 형성합니다.
     //undefined는 '값이 할당되지 않은 상태’를 나타낼 때 사용합니다.
+
+    /*
+    객체와 심볼
+    객체(object)형은 특수한 자료형입니다.
+    객체형을 제외한 다른 자료형은 문자열이든 숫자든 한 가지만 표현할 수 있기 때문에 원시(primitive) 자료형이라 부릅니다.
+    반면 객체는 데이터 컬렉션이나 복잡한 개체(entity)를 표현할 수 있습니다.
+    이런 특징 때문에 자바스크립트에서 객체는 좀 더 특별한 취급을 받습니다. 자세한 내용은 원시형을 배우고 난 후 객체에서 다루도록 하겠습니다.
+    심볼(symbol)형은 객체의 고유한 식별자(unique identifier)를 만들 때 사용됩니다.
+    */
+
     let x;
     alert(x); // "undefined"
 
@@ -83,6 +93,31 @@
     //typeof 연산자는 두 가지 형태의 문법을 지원합니다.
     //연산자: typeof x
     //함수: typeof(x)
+
+    typeof undefined // "undefined"
+    typeof 0 // "number"
+    typeof 10n // "bigint"
+    typeof true // "boolean"
+    typeof "foo" // "string"
+    typeof Symbol("id") // "symbol"
+    typeof Math // "object"  (1)
+    typeof null // "object"  (2)
+    typeof alert // "function"  (3)
+
+    Math는 수학 연산을 제공하는 내장 객체이므로 "object"가 출력됩니다.
+    Math에 대해선 숫자형 챕터에서 학습하도록 하겠습니다.
+    내장 객체는 객체형이라는 것을 알려주기 위해 이런 예시를 작성해 보았습니다.
+    typeof null의 결과는 "object"입니다.
+    null은 별도의 고유한 자료형을 가지는 특수 값으로 객체가 아니지만,
+    하위 호환성을 유지하기 위해 이런 오류를 수정하지 않고 남겨둔 상황입니다.
+    언어 자체의 오류이므로 null이 객체가 아님에 유의하시기 바랍니다.
+    typeof는 피연산자가 함수면 "function"을 반환합니다.
+    그러므로 typeof alert는 "function"을 출력해줍니다.
+    그런데 '함수’형은 따로 없습니다. 함수는 객체형에 속합니다.
+    이런 동작 방식이 형식적으론 잘못되긴 했지만, 아주 오래전에 만들어진 규칙이었기 때문에 하위 호완성 유지를 위해 남겨진 상태입니다.
+    한편, 실무에선 이런 특징이 매우 유용하게 사용되기도 합니다.
+
+
     </script>
 </body>
 </html>
