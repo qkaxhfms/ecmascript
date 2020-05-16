@@ -7,23 +7,20 @@
 </head>
 <body>
     <h1>Data Types</h1>
-
-    자바스크립트에는 일곱 가지 기본 자료형이 있습니다.
-
-    숫자형 – 정수, 부동 소수점 숫자 등의 숫자를 나타낼 때 사용합니다.
-    bigint – 길이 제약 없이 정수를 나타낼 수 있습니다.
-    문자형 – 하나 혹은 그 이상의 문자로 만들어진 문자열을 나타낼 때 사용합니다. 단일 문자를 나타내는 별도의 자료형은 없습니다.
-    불린형 – true, false를 나타낼 때 사용합니다.
-    null – null 값만을 위한 독립 자료형입니다. null은 알 수 없는 값을 나타냅니다.
-    undefined – undefined 값만을 위한 독립 자료형입니다. undefined는 할당되지 않은 값을 나타냅니다.
-    객체형 – 복잡한 데이터 구조를 표현할 때 사용합니다.
-    심볼형 – 객체의 고유 식별자를 만들 때 사용합니다.
-    typeof 연산자는 피연산자의 자료형을 알려줍니다.
+    <p>자바스크립트에는 일곱 가지 기본 자료형이 있습니다.</p>
+    <ul>
+        <li>숫자형 – 정수, 부동 소수점 숫자 등의 숫자를 나타낼 때 사용합니다.</li>
+        <li>bigint – 길이 제약 없이 정수를 나타낼 수 있습니다.</li>
+        <li>문자형 – 하나 혹은 그 이상의 문자로 만들어진 문자열을 나타낼 때 사용합니다. 단일 문자를 나타내는 별도의 자료형은 없습니다.</li>
+        <li>불린형 – true, false를 나타낼 때 사용합니다.</li>
+        <li>null – null 값만을 위한 독립 자료형입니다. null은 알 수 없는 값을 나타냅니다.</li>
+        <li>undefined – undefined 값만을 위한 독립 자료형입니다. undefined는 할당되지 않은 값을 나타냅니다.</li>
+        <li>객체형 – 복잡한 데이터 구조를 표현할 때 사용합니다.</li>
+        <li>심볼형 – 객체의 고유 식별자를 만들 때 사용합니다.</li>
+        <li>typeof 연산자는 피연산자의 자료형을 알려줍니다.</li>
+    </ul>
+    <p>typeof x 또는 typeof(x) 형태로 사용합니다.<br> 피 연산자의 자료형을 문자열 형태로 반환합니다.<br> null의 typeof 연산은 "object"인데, 이는 언어상 오류입니다. null은 객체가 아닙니다.</p>
     
-    typeof x 또는 typeof(x) 형태로 사용합니다.
-    피 연산자의 자료형을 문자열 형태로 반환합니다.
-    null의 typeof 연산은 "object"인데, 이는 언어상 오류입니다. null은 객체가 아닙니다.
-
     <script>
     // 자료형
     let message = "hello";
@@ -34,45 +31,41 @@
     n=12.345;
     console.log(1/0); -> infinity
     console.log(Infinity); -> infinity
-    console.log("숫자가아님 / 2") -> Nan 계산 중에 에러가발생했따.
+    console.log("숫자가아님 / 2") -> Nan 계산 중에 에러가발생했다.
 
     //BigInt 
-    BigInt
-    //BigInt형은 표준으로 채택된 지 얼마 안 된 자료형으로, 길이에 상관없이 정수를 나타낼 수 있습니다.
-    //BigInt는 정수 리터럴 끝에 n을 붙이면 만들 수 있습니다.
-    
     const bigInt = 1234567890123456789012345678901234567890n;
-    //끝에 'n'이 붙으면 BigInt형 자료입니다.
+    /*BigInt형은 표준으로 채택된 지 얼마 안 된 자료형으로, 길이에 상관없이 정수를 나타낼 수 있습니다.
+    BigInt는 정수 리터럴 끝에 n을 붙이면 만들 수 있습니다.    
+    끝에 'n'이 붙으면 BigInt형 자료입니다.
+    */
 
     //문자형
-    큰따옴표: "Hello"
-    작은따옴표: 'Hello'
+    /*큰따옴표: "Hello", 작은따옴표: 'Hello'
     역 따옴표(백틱, backtick): `Hello`
     역 따옴표로 변수나 표현식을 감싼 후 ${…}안에 넣어주면, 아래와 같이 원하는 변수나 표현식을 문자열 중간에 손쉽게 넣을 수 있습니다.
-
-    let name = "John";
+    */
+   
     //변수를 문자열 중간에 삽입
+    let name = "John";
+    // 표현식을 문자열 중간에 삽입
     alert( `Hello, ${name}!` );// Hello, John!    
     // 표현식을 문자열 중간에 삽입
     alert( `the result is ${1 + 2}` ); // the result is 3
-    // 표현식을 문자열 중간에 삽입
     alert( "the result is ${1 + 2}" ); // the result is ${1 + 2} (큰따옴표는 확장 기능을 지원하지 않습니다.)
 
-    // 불린형
-    // true or false 두 가지밖에 없는 자료형
+    // 불린형 : true or false 두 가지밖에 없는 자료형
     let nameFieldChecked = true; // 네, name field가 확인되었습니다(checked).
     let ageFieldChecked = false; // 아니요, age field를 확인하지 않았습니다(not checked)
     let isGreater = 4 > 1;
     alert( isGreater ); // true (비교 결과: "yes")
 
-    //ull값
-    //null 값은 지금까지 소개한 자료형 중 어느 자료형에도 속하지 않는 값입니다.
-    //null 값은 오로지 null 값만 포함하는 별도의 자료형을 만듭니다.
+    //null값
     let age = null;
+    //null 값은 지금까지 소개한 자료형 중 어느 자료형에도 속하지 않는 값입니다., null 값만 포함하는 별도의 자료형을 만듭니다.
 
     //undefined 값
-    //undefined 값도 null 값처럼 자신만의 자료형을 형성합니다.
-    //undefined는 '값이 할당되지 않은 상태’를 나타낼 때 사용합니다.
+    //undefined 값도 null 값처럼 자신만의 자료형을 형성합니다., 값이 할당되지 않은 상태’를 나타낼 때 사용합니다.
 
     /*
     객체와 심볼
@@ -103,21 +96,6 @@
     typeof Math // "object"  (1)
     typeof null // "object"  (2)
     typeof alert // "function"  (3)
-
-    Math는 수학 연산을 제공하는 내장 객체이므로 "object"가 출력됩니다.
-    Math에 대해선 숫자형 챕터에서 학습하도록 하겠습니다.
-    내장 객체는 객체형이라는 것을 알려주기 위해 이런 예시를 작성해 보았습니다.
-    typeof null의 결과는 "object"입니다.
-    null은 별도의 고유한 자료형을 가지는 특수 값으로 객체가 아니지만,
-    하위 호환성을 유지하기 위해 이런 오류를 수정하지 않고 남겨둔 상황입니다.
-    언어 자체의 오류이므로 null이 객체가 아님에 유의하시기 바랍니다.
-    typeof는 피연산자가 함수면 "function"을 반환합니다.
-    그러므로 typeof alert는 "function"을 출력해줍니다.
-    그런데 '함수’형은 따로 없습니다. 함수는 객체형에 속합니다.
-    이런 동작 방식이 형식적으론 잘못되긴 했지만, 아주 오래전에 만들어진 규칙이었기 때문에 하위 호완성 유지를 위해 남겨진 상태입니다.
-    한편, 실무에선 이런 특징이 매우 유용하게 사용되기도 합니다.
-
-
     </script>
 </body>
 </html>
