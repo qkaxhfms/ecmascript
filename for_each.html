@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For Each</title>
+</head>
+<body>
+    <h1>For each</h1>
+    <div>
+    forEach()callback배열의 각 요소에 대해 제공된 함수를 오름차순으로 한 번 호출합니다 .
+    삭제되었거나 초기화되지 않은 인덱스 속성에 대해서는 호출되지 않습니다.
+    </div>
+    <script>
+        let rating = [5,4,5];
+        let sum = 0;
+
+        let sumFunction = async function (a,b){
+            return a + b;
+        }
+
+        rating.forEch(async function(rating) {
+            sum = await sumFunction(sum ,rating)
+        })
+
+        console.log(sum);
+
+        const items = ['item1', 'item2', 'item3']
+        const copyItems = []
+
+        //before
+        for (let i=0; <items.legnth; i++){
+            copyItems.push(items[i])
+        }
+
+        //after
+        items.forEach(function(item){
+            copyItems.push(item)
+        })
+
+
+
+
+
+
+    </script>
+</body>
+</html>
