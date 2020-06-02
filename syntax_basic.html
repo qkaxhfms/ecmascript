@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Syntax Basics</title>
+    <style>
+        *{margin:0;padding:0;}
+    </style>
 </head>
 <body>
     <h1>Syntax Basics</h1>
@@ -12,9 +15,111 @@
     변수는 위치(주소)를 기억하는 저장소이다. 위치란 메모리 상의 주소(address)를 의미한다.<br>
     즉, 변수란 메모리 주소(Memory address)에 접근하기 위해 사람이 이해할 수 있는 언어로 지정한 식별자(identifier)이다.
     </div>
-    <div>
+    <div class="code">
         var x; // 변수의 선언<br>
         x = 6; // 정수값의 할당
+    </div>
+    <h2>값</h2>
+    <div class="code">
+        var str = 'hello world';
+    </div>
+    <table>
+        <thead>
+            <tr>
+                <th>용어</th>
+                <th>의미</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>데이터 타입 Data Type</td>
+                <td>프로그래밍 언어에서 사용할 수 있는 값의 종류</td>
+            </tr>
+            <tr>
+                <td>변수 Variable</td>
+                <td>값이 저장된 메모리 공간의 주솔르 가리키는 식별자</td>
+            </tr>
+            <tr>
+                <td>리터럴 Literal notation</td>
+                <td>소스코드 안에서 직접 만들어 낸 상수 값 자체 / 값을 구성하는 최소 단위</td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="code">
+        // 숫자 리터럴
+        10.50
+        1001
+
+        // 문자열 리터럴
+        'Hello'
+        "World"
+
+        // 불리언 리터럴
+        true
+        false
+
+        // null 리터럴
+        null
+
+        // undefined 리터럴
+        undefined
+
+        // 객체 리터럴
+        { name: 'Lee', gender: 'male' }
+
+        // 배열 리터럴
+        [ 1, 2, 3 ]
+
+        // 정규표현식 리터럴
+        /ab+c/
+
+        // 함수 리터럴
+        function() {}
+    </div>
+    <h2>연산자 Operator</h2>
+    <div class="code">
+        // 산술 연산자
+        var area = 5 * 4; // 20
+
+        // 문자열 연결 연산자
+        var str = 'My name is ' + 'Lee'; // "My name is Lee"
+
+        // 할당 연산자
+        var color = 'red'; // "red"
+
+        // 비교 연산자
+        var foo = 3 > 5; // false
+
+        // 논리 연산자
+        var bar = (5 > 3) && (2 < 4);  // true
+
+        // 타입 연산자
+        var type = typeof 'Hi'; // "string"
+
+        // 인스턴스 생성 연산자
+        var today = new Date(); // Sat Dec 01 2018 00:57:19 GMT+0900 (한국 표준시)
+    </div>
+    <h2>키워드 Keyword</h2>
+    <div class="code">
+        // 변수의 선언
+        var x = 5 + 6;
+
+        // 함수의 선언
+        function foo (arg) {
+        // 함수 종료 및 값의 반환
+        return ++arg;
+        }
+
+        var i = 0;
+        // 반복문
+        while (1) {
+        if (i > 5) {
+            // 반복문 탈출
+            break;
+        }
+        console.log(i);
+        i++;
+        }
     </div>
 </body>
 </html>
