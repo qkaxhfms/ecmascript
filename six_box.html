@@ -62,10 +62,29 @@
     <script>
         let $wrap = document.getElementsByClassName('wrap')[0];
         let $nav = $wrap.getElementsByClassName('nav')[0];
+        let $nav_li = $nav.getElementsByTagName('li');
+
+        let $con = $wrap.getElementsByClassName('con')[0];
+        let $con_li = $con.getElementsByTagName('li');
+
+        let len = $nav_li.length;
         console.log($wrap);
         console.log($nav);
-        console.log($wrap);
-        console.log($wrap);
+        console.log($nav_li);
+        console.log(len);
+
+        for(var i=0; i<len; i++){
+            (function(index){
+                $nav_li[index].onclick = function(){
+                    for(var k=0; k<len; k++){
+                        $nav_li[k].className='';
+                        $con_li[k].className='';
+                    }
+                    $nav_li[index].className="on";
+                    $con_li[index].className="on";
+                }
+            })(i);
+        }
     </script>
 </body>
 </html>
