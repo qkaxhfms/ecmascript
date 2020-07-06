@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Six Box</title>
+    <style>
+        * {margin:0px; padding:0px;}
+        ul,ol,li {list-style:none;}
+        a {text-decoration:none;}
+        body { font: 12px /1.4 arial, sans-serif; color:#666;  background:#333;}
+        .wrap{position: relative;   height:100vh;background:yellow;}
+        .wrap .inner{position: absolute;top:50%;left:50%;transform:translate(-50%,-50%);}
+        .wrap .inner::after{display:block;content:'';clear:both;}
+        .wrap .inner>div{float:left;height:135px;}
+        .wrap .nav{width:90px;background:green;}
+        .wrap .nav ul::after{display:block;content:'';clear:both;}
+        .wrap .nav li{float:left;text-align:center;line-height:45px;width:45px;height:45px;color:#fff;}
+        .wrap .nav li:nth-child(1){background:#111;}
+        .wrap .nav li:nth-child(2){background:#222;}
+        .wrap .nav li:nth-child(3){background:#333;}
+        .wrap .nav li:nth-child(4){background:#444;}
+        .wrap .nav li:nth-child(5){background:#555;}
+        .wrap .nav li:nth-child(6){background:#666;}
+        .wrap .con{position: relative; width:135px;background:blue;}
+        .wrap .con li.on{display:block;}
+        .wrap .con li{display:none;position: absolute;width:100%;height:100%;text-align:center;font-size:30px;line-height:135px;}
+        .wrap .con li:nth-child(1){background:#1f1;}
+        .wrap .con li:nth-child(2){background:#f22;}
+        .wrap .con li:nth-child(3){background:#33f;}
+        .wrap .con li:nth-child(4){background:#4f4;}
+        .wrap .con li:nth-child(5){background:#55f;}
+        .wrap .con li:nth-child(6){background:#f6f;}
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="inner">
+            <div class="nav">
+                <ul>
+                    <li class="box1">1</li>
+                    <li class="box2">2</li>
+                    <li class="box3">3</li>
+                    <li class="box4">4</li>
+                    <li class="box5">5</li>
+                    <li class="box6">6</li>
+                </ul>
+            </div>
+            <div class="con">
+                <ul>
+                    <li class="on">1</li>
+                    <li>2</li>
+                    <li>3</li>
+                    <li>4</li>
+                    <li>5</li>
+                    <li>6</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        let $wrap = document.getElementsByClassName('wrap')[0];
+        let $nav = $wrap.getElementsByClassName('nav')[0];
+        console.log($wrap);
+        console.log($nav);
+        console.log($wrap);
+        console.log($wrap);
+    </script>
+</body>
+</html>
